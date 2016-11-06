@@ -14,6 +14,15 @@ com.lambdaworks.redis.cluster.models.partitions
 com.lambdaworks.redis.cluster.models.slots
 com.lambdaworks.redis.cluster.topology
 com.lambdaworks.redis.codec
+com.lambdaworks.redis.dynamic
+com.lambdaworks.redis.dynamic.annotation
+com.lambdaworks.redis.dynamic.codec
+com.lambdaworks.redis.dynamic.domain
+com.lambdaworks.redis.dynamic.intercept
+com.lambdaworks.redis.dynamic.output
+com.lambdaworks.redis.dynamic.parameter
+com.lambdaworks.redis.dynamic.segment
+com.lambdaworks.redis.dynamic.support
 com.lambdaworks.redis.event
 com.lambdaworks.redis.event.connection
 com.lambdaworks.redis.event.metrics
