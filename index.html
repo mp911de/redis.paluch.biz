@@ -53,7 +53,7 @@
                   <li id="publishDate">Last Published: 2016-11-06
                       <span class="divider">|</span>
                    </li>
-                  <li id="projectVersion">Version: 4.4.0-SNAPSHOT
+                  <li id="projectVersion">Version: 5.0.0-SNAPSHOT
                       </li>
                       
                 
@@ -75,13 +75,6 @@
   
             <a href="#"><i class="none"></i>Introduction</a>
           </li>
-                
-      <li>
-  
-                          <a href="https://github.com/mp911de/lettuce/wiki/Getting-started" class="externalLink" title="Getting Started">
-          <i class="none"></i>
-        Getting Started</a>
-            </li>
                                                                   
       <li>
   
@@ -121,23 +114,9 @@
                 
       <li>
   
-                          <a href="docs/api/releases/latest-5.x/index.html" title="JavaDoc (5.x)">
-          <i class="none"></i>
-        JavaDoc (5.x)</a>
-            </li>
-                
-      <li>
-  
                           <a href="docs/api/releases/" title="JavaDoc (archive)">
           <i class="none"></i>
         JavaDoc (archive)</a>
-            </li>
-                
-      <li>
-  
-                          <a href="https://github.com/mp911de/lettuce/wiki" class="externalLink" title="Wiki">
-          <i class="none"></i>
-        Wiki</a>
             </li>
                               <li class="nav-header">Project Documentation</li>
                                                                                                                                                                                                                                                             
@@ -253,6 +232,8 @@
 
 <ul>
   
+<li>lettuce 3.x works with Java 6, 7 and 8, lettuce 4.x requires Java 8</li>
+  
 <li><a class="externalLink" href="https://github.com/mp911de/lettuce/wiki/Basic-usage">synchronous</a>, <a class="externalLink" href="https://github.com/mp911de/lettuce/wiki/Asynchronous-API-%284.0%29">asynchronous</a> and <a class="externalLink" href="https://github.com/mp911de/lettuce/wiki/Reactive-API-%284.0%29">reactive</a> usage</li>
   
 <li><a class="externalLink" href="https://github.com/mp911de/lettuce/wiki/Redis-Sentinel">Redis Sentinel</a></li>
@@ -270,6 +251,7 @@
 <li>multiple <a class="externalLink" href="https://github.com/mp911de/lettuce/wiki/Command-Interfaces-%284.0%29">Command Interfaces</a></li>
 </ul>
 <p>See the <a class="externalLink" href="https://github.com/mp911de/lettuce/wiki">Wiki</a> for more docs.</p>
+<p>I&#x2019;m developing and maintaining actively the fork of <a class="externalLink" href="https://github.com/wg/lettuce">https://github.com/wg/lettuce</a></p>
 <p><a class="externalLink" href="https://gitter.im/mp911de/lettuce"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/mp911de/lettuce" /></a> <a class="externalLink" href="https://travis-ci.org/mp911de/lettuce"><img src="https://travis-ci.org/mp911de/lettuce.svg" alt="Build Status" /></a> <a class="externalLink" href="https://coveralls.io/r/mp911de/lettuce"><img src="https://img.shields.io/coveralls/mp911de/lettuce.svg" alt="Coverage Status" /></a> <a class="externalLink" href="https://maven-badges.herokuapp.com/maven-central/biz.paluch.redis/lettuce"><img src="https://maven-badges.herokuapp.com/maven-central/biz.paluch.redis/lettuce/badge.svg" alt="Maven Central" /></a></p>
 <hr />
 <div class="section">
@@ -304,7 +286,7 @@
 <pre>&lt;dependency&gt;
   &lt;groupId&gt;biz.paluch.redis&lt;/groupId&gt;
   &lt;artifactId&gt;lettuce&lt;/artifactId&gt;
-  &lt;version&gt;4.3.0.Final&lt;/version&gt;
+  &lt;version&gt;4.2.2.Final&lt;/version&gt;
 &lt;/dependency&gt;
 </pre></div></div>
 <p>Shaded JAR-File (packaged dependencies and relocated to the <tt>com.lambdaworks</tt> package to prevent version conflicts)</p>
@@ -314,13 +296,13 @@
 <pre>&lt;dependency&gt;
   &lt;groupId&gt;biz.paluch.redis&lt;/groupId&gt;
   &lt;artifactId&gt;lettuce&lt;/artifactId&gt;
-  &lt;version&gt;4.3.0.Final&lt;/version&gt;
+  &lt;version&gt;4.2.2.Final&lt;/version&gt;
   &lt;classifier&gt;shaded&lt;/classifier&gt;
   
   &lt;exclusions&gt;
     &lt;exclusion&gt;
-      &lt;groupId&gt;io.reactivex&lt;/groupId&gt;
-      &lt;artifactId&gt;rxjava&lt;/artifactId&gt;
+      &lt;groupId&gt;io.projectreactor&lt;/groupId&gt;
+      &lt;artifactId&gt;reactor-core&lt;/artifactId&gt;
     &lt;/exclusion&gt;
     &lt;exclusion&gt;
       &lt;groupId&gt;org.latencyutils&lt;/groupId&gt;
@@ -341,10 +323,6 @@
     &lt;exclusion&gt;
       &lt;groupId&gt;io.netty&lt;/groupId&gt;
       &lt;artifactId&gt;netty-codec&lt;/artifactId&gt;
-    &lt;/exclusion&gt;
-    &lt;exclusion&gt;
-      &lt;groupId&gt;com.google.guava&lt;/groupId&gt;
-      &lt;artifactId&gt;guava&lt;/artifactId&gt;
     &lt;/exclusion&gt;
     &lt;exclusion&gt;
       &lt;groupId&gt;io.netty&lt;/groupId&gt;
